@@ -1,53 +1,126 @@
-// task1
-var num = 9;
-document.write("the value is :;" + num);
-var num = ++num;
-document.write("<br>the value of ++num is :" + num);
-var num = num++;
-document.write(" <br>value of ++num is:" + num);
-var num = --num;
-document.write(" <br>value of --num is:" + num);
-var num = num--;
-document.write(" <br>value of num-- is:" + num);
-// task2
-var a = 23;
-var b = 11;
-document.write(+--a + "<br>");
-document.write(+--a - --b + "<br>");
-document.write(--a - --b + ++b + "<br>");
-document.write(--a - --b + ++b + b + "<br>");
-var result = --a - --b + ++b + b--;
-document.write(result);
-document.write("<br>a is" + a);
-document.write("<br>b is" + b);
-document.write("<br>result is" + result);
-// task3
-var enter = prompt("enter Name");
-var msg = "hey wellcome!";
-alert(msg);
-// task4 no assgnment
-// task5
-var num = parseInt(prompt("enter number"));
-if (isNaN(num)) {
-  number = 5;
+// task 1
+      // Prompt the user to enter a character
+      var character = prompt("Enter a character:");
+
+      // Get the ASCII code of the character
+      var asciiCode = character.charCodeAt(0);
+
+      // Check if the character is a number
+      if (asciiCode >= 48 && asciiCode <= 57) {
+      document.write("<h3>The input is a number.</h3>");
+      }
+      // Check if the character is an uppercase letter
+      else if (asciiCode >= 65 && asciiCode <= 90) {
+      document.write("<h3>The input is an uppercase letter.</h3>");
+      }
+      // Check if the character is a lowercase letter
+      else if (asciiCode >= 97 && asciiCode <= 122) {
+      document.write("<h3>The input is a lowercase letter.</h3>");
+      }
+      // If none of the above conditions match, the input is not a number or a letter
+      else {
+      document.write("<h3>The input is not a number or a letter.</h3>");
+      }
+       // task 2
+         // Prompt the user to enter the first integer
+      var firstInteger = parseInt(prompt("Enter the first integer:"));
+
+      // Prompt the user to enter the second integer
+      var secondInteger = parseInt(prompt("Enter the second integer:"));
+
+      // Check if the first integer is greater than the second integer
+      if (firstInteger > secondInteger) {
+      document.write("<h3>The larger number is: " + firstInteger + "</h3>");
+      }
+      // Check if the second integer is greater than the first integer
+      else if (secondInteger > firstInteger) {
+      document.write("<h3>The larger number is: " + secondInteger + "</h3>");
+      }
+      // If none of the above conditions match, the two integers are equal
+      else {
+      document.write("<h3>The two integers are equal.</h3>");
+      }
+// task 3
+// Prompt the user to enter a number
+var number = parseFloat(prompt("Enter a number:"));
+
+// Check if the number is positive
+if (number > 0) {
+document.write("<h3>The number is positive.</h3>");
 }
-var table = "";
-for (var i = 1; i <= 10; i++) {
-  table += num + "x" + i + "=" + num * i + "<br>";
+// Check if the number is negative
+else if (number < 0) {
+document.write("<h3>The number is negative.</h3>");
 }
-document.write(table);
-// task6
-var name1 = prompt("enter subject name one ");
-var name2 = prompt("enter subject name two ");
-var name3 = prompt("enter subject name three ");
-var total = 100;
-var grand_total = 300;
-var obtained_marks1 = parseInt(prompt("1st subject marks"));
-var obtained_marks2 = parseInt(prompt("2nd subject marks"));
-var obtained_marks3 = parseInt(prompt("3rd subject marks"));
-var all_obtained = obtained_marks1 + obtained_marks2 + obtained_marks3;
-var percentage = (all_obtained / grand_total) * 100;
-document.write("subject one  is " + name1);
-document.write("<br>subject two is " + name2);
-document.write("<br>subject three is " + name3);
-document.write("<br> overall percentage is " + percentage);
+// If none of the above conditions match, the number is zero
+else {
+document.write("<h3>The number is zero.</h3>");
+} 
+//   task 4
+// Prompt the user to enter a character
+var character = prompt("Enter a character:");
+
+// Convert the character to lowercase for easier comparison
+character = character.toLowerCase();
+
+// Check if the character is a vowel
+if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
+document.write("<h3>True, the character is a vowel.</h3>");
+}
+// If the character is not a vowel
+else {
+document.write("<h3>False, the character is not a vowel.</h3>");
+}
+//   task 5
+// Store the correct password
+var correctPassword = "Password 123";
+
+// Prompt the user to enter their password
+var enteredPassword = prompt("Enter your password:");
+
+// Check if the entered password is empty
+if (!enteredPassword) {
+document.write("<h3>Please enter your password.</h3>");
+}
+// Check if the entered password matches the correct password
+else if (enteredPassword === correctPassword) {
+document.write("<h3>Correct! The password you entered matches the original password.</h3>");
+}
+// If the entered password is incorrect
+else {
+document.write("<h3>Incorrect password.</h3>");
+}
+//   task 6
+// var greeting;
+      // var hour = 13;
+      // if (hour < 18) {
+      // greeting = "Good day";
+      // else
+      // greeting = "Good evening";
+      // }
+
+      var greeting;
+      var hour = 13;
+      if (hour < 18) {
+      greeting = "Good day";
+      } else {
+      greeting = "Good evening";
+      }
+      
+// task 7
+// Prompt the user to enter the time in 24-hour clock format
+var time = prompt("Enter the time in 24-hour clock format (e.g., 1900 for 7pm):");
+
+// Extract the hour from the time
+var hour = parseInt(time.substring(0, 2));
+
+// Determine the appropriate case based on the hour
+if (hour >= 0 && hour < 12) {
+document.write("<h3> Good morning!</h3>");
+} else if (hour >= 12 && hour < 18) {
+document.write("<h3> Good afternoon!</h3>");
+} else if (hour >= 18 && hour < 24) {
+document.write("<h3> Good evening!</h3>");
+} else {
+document.write("<h3> Invalid time entered.</h3>");
+}
