@@ -1,110 +1,112 @@
 // task 1
-var literalArray = [];
+var num = [[],[],[]]
+
+
+
+
 // task 2
-var objectArray = [];
+num[0] = [0,1,2,3]
+num[1] = [1,0,1,2]
+num[2] = [2,1,0,1]
+document.write(num[0]+"<br/>"+num[1]+"<br/>"+num[2]+"<br/>")
+
+
 // task 3
-var stringArray = ["karachi", "lahore", "islamabad"];
+for (var i = 1; i <= 10; i++){
+    document.write(i+"<br/>")
+}
 // task 4
-var numberArray = [1,2,3,4,5];
+var table = +prompt("Enter a number  to show its multiplication table");
+var length = +prompt("Enter Multiplication table" );
+document.write("Multiplication Table of " +table+"<br/> length"+length+ "<br/>")
+for(var i = 1; i <= length; i++){
+    document.write(table+" x "+i+" = "+table*i+"<br/>")
+}
+
 // task 5
-var booleanArray = [true,false];
+var fruits = ["apple", "banana", "mango", "orange", "strawberry"]
+var arr = fruits.length
+for(var i = 0; i <arr; i++){
+    document.write("Element at index "+i+" is "+fruits[i]+"<br/>")
+}
+
 // task 6
-var mixedArray = ["a",123,"true","karachi"];
+var num = [];
+var odd = [];
+var even = [];
+var series = [];
+
+for(var i = 0; i <=15; i++){
+    num[i] = i+1;
+}
+document.write("counting :"+num+"<br/>")
+document.write(" Reverse counting :"+num.reverse()+"<br/>")
+
+for(var a = 1; a <= 20; a++){
+    if(a % 2 !==0){
+        even[a] = a;
+    }
+}
+document.write("Even :"+even+"<br/>")
+for(var b = 1; b <= 20; b++){
+    if(b % 2 === 0){
+        odd[b] = b;
+    }
+}
+document.write("Odd :"+odd+"<br/>")
+for(var d = 1; d <= 20; d++){
+    if(d % 2 === 0){
+        series[d] = d+"k";
+    }
+}
+document.write("Series :"+series+"<br/>")
+
+
+
 
 // task 7
-var educationArray = ["SSC","HSC","BCS","BS","BCOM","MS","M.Phil","PhD"]
-document.write("<h1>Qualification</h1>")
-for (var i = 0; i <=7; i++){
-    document.write(i+1+")"+educationArray[i]+"<br/>")
+
+var a = ["cake","apple pie","cookie","chips","patties"]
+var user = prompt("Welcome to ABC Bkery what do you want to order sir/ma'am")
+var b = a.indexOf(user)
+if(b<0){
+    alert("we are sorry"+user+"is not available in our bakery")
 }
+else{
+    alert(user+"is available at index "+b+" in our bakery") 
+}
+
+
 
 // task 8
-var studentName = ["Micheal","John", "Tony"]
-var score = [320,230,480];
-var percentage = [];
-for(var i = 0; i <=2; i++){
-    percentage[i] =  score[i] / 500 * 100
 
-}
+var arr = [24,53,78,91,12];
+var max = Math.max.apply(Math,arr)
+var min = Math.min.apply(Math,arr)
+console.log(max , min)
+document.write(
+    "Array items: "+arr+
+    "<br/> The largest number is " +max+
+    "<br/> The samllest number is " +min
+)
 
-for (var a = 0; a<=2; a++){
-document.write("score of "+studentName[a]+" is "+score[a]+"Precentage "+percentage[a]+"% <br/>")
-}
 
 // task 9
 
-var color = ["Red","Yellow","Green"]
-document.write(color+"<br/>");
-var beginning = prompt("Enter which color you want to add at the beginning of array")
-color.unshift(beginning)
-document.write(color+"<br/>");
-var ending = prompt("Enter which color you want to add at the ending of array")
-color.push(ending)
-document.write(color+"<br/>");
-color.shift()
-document.write(color+"<br/>");
-color.pop()
-document.write(color+"<br/>");
-var update =+prompt("At which index do you want to add color?")
-var newColor =+prompt(" which color do you want to add on that index?")
-color.splice(update,0,newColor)
-document.write(color+"<br/>");
-var dlete =+prompt("At which index do you want to delete color?")
-var colorDelete =+prompt(" which color do you want to delete on that index?")
-color.splice(dlete, colorDelete);
-document.write(color+"<br/>");
+var arr = [24,53,78,91,12];
+var max = Math.max.apply(Math,arr)
+var min = Math.min.apply(Math,arr)
+console.log(max , min)
+document.write(
+    "Array items: "+arr+
+    "<br/> The largest number is " +max+
+    "<br/> The samllest number is " +min+"<br/>"
+)
 
 // task 10
-var score = [320,230,480,120]
-document.write("Score of students :" +score+"<br/>");
-score.sort()
-document.write(" Ordered Score of students :" +score);
 
-// task 11
-var cities = ["karachi","lahore","quetta","peshawar"];
-document.write("cities list: <br/>"+cities+"<br/>")
-var selectedCities = cities.slice(2,4)
-document.write("selected cities list: <br/>"+selectedCities)
-// task 12
-var arr = ["This","is","my","cat"]
-document.write("array/; <br/>"+arr+"<br/>")
-var join = arr.join(" ")
-document.write("string: <br/>"+join) 
-// task 13
-
-var device = ["keyboard",",mouse","printer","monitor"]
-document.write("devices : <br/>"+device+"<br/>")
-var firstDevice = device.shift()
-document.write("out : <br/>"+firstDevice+"<br/>")
-var secondDevice = device.shift()
-document.write("out : <br/>"+secondDevice+"<br/>")
-var thirdDevice = device.shift()
-document.write("out : <br/>"+thirdDevice+"<br/>")
-var fourthDevice = device.shift()
-document.write("out : <br/>"+fourthDevice+"<br/>")
-
-// task 14
-
-
-var device = ["keyboard",",mouse","printer","monitor"]
-document.write("devices : <br/>"+device+"<br/>")
-var firstDevice = device.pop()
-document.write("out : <br/>"+firstDevice+"<br/>")
-var secondDevice = device.pop()
-document.write("out : <br/>"+secondDevice+"<br/>")
-var thirdDevice = device.pop()
-document.write("out : <br/>"+thirdDevice+"<br/>")
-var fourthDevice = device.pop()
-document.write("out : <br/>"+fourthDevice+"<br/>")
-
-// task 15
-
-var phone = ["apple","samsung","motorla","nokia","sony & haier"]
-document.write(
-    "<select>"+
-    "<option>"+phone[0]+"</option>"+
-    "<option>"+phone[1]+"</option>"+
-    "<option>"+phone[2]+"</option>"+
-    "<option>"+phone[3]+"</option>"+
-    "<option>"+phone[4]+"</option>"+
-    "</select>"
+for(var i = 1; i<=100; i++){
+    if(i%5 === 0){
+        document.write(i+" ,")
+    }
+}
