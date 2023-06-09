@@ -1,126 +1,173 @@
-// task 1
-      // Prompt the user to enter a character
-      var character = prompt("Enter a character:");
-
-      // Get the ASCII code of the character
-      var asciiCode = character.charCodeAt(0);
-
-      // Check if the character is a number
-      if (asciiCode >= 48 && asciiCode <= 57) {
-      document.write("<h3>The input is a number.</h3>");
-      }
-      // Check if the character is an uppercase letter
-      else if (asciiCode >= 65 && asciiCode <= 90) {
-      document.write("<h3>The input is an uppercase letter.</h3>");
-      }
-      // Check if the character is a lowercase letter
-      else if (asciiCode >= 97 && asciiCode <= 122) {
-      document.write("<h3>The input is a lowercase letter.</h3>");
-      }
-      // If none of the above conditions match, the input is not a number or a letter
-      else {
-      document.write("<h3>The input is not a number or a letter.</h3>");
-      }
-       // task 2
-         // Prompt the user to enter the first integer
-      var firstInteger = parseInt(prompt("Enter the first integer:"));
-
-      // Prompt the user to enter the second integer
-      var secondInteger = parseInt(prompt("Enter the second integer:"));
-
-      // Check if the first integer is greater than the second integer
-      if (firstInteger > secondInteger) {
-      document.write("<h3>The larger number is: " + firstInteger + "</h3>");
-      }
-      // Check if the second integer is greater than the first integer
-      else if (secondInteger > firstInteger) {
-      document.write("<h3>The larger number is: " + secondInteger + "</h3>");
-      }
-      // If none of the above conditions match, the two integers are equal
-      else {
-      document.write("<h3>The two integers are equal.</h3>");
-      }
-// task 3
-// Prompt the user to enter a number
-var number = parseFloat(prompt("Enter a number:"));
-
-// Check if the number is positive
-if (number > 0) {
-document.write("<h3>The number is positive.</h3>");
+// task1
+var cityName = prompt("Enter the city name:");
+if (cityName.toLowerCase() === "karachi") {
+  document.write("<h2> Welcome to the city of lights!</h2>");
 }
-// Check if the number is negative
-else if (number < 0) {
-document.write("<h3>The number is negative.</h3>");
-}
-// If none of the above conditions match, the number is zero
-else {
-document.write("<h3>The number is zero.</h3>");
-} 
-//   task 4
-// Prompt the user to enter a character
-var character = prompt("Enter a character:");
-
-// Convert the character to lowercase for easier comparison
-character = character.toLowerCase();
-
-// Check if the character is a vowel
-if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
-document.write("<h3>True, the character is a vowel.</h3>");
-}
-// If the character is not a vowel
-else {
-document.write("<h3>False, the character is not a vowel.</h3>");
-}
-//   task 5
-// Store the correct password
-var correctPassword = "Password 123";
-
-// Prompt the user to enter their password
-var enteredPassword = prompt("Enter your password:");
-
-// Check if the entered password is empty
-if (!enteredPassword) {
-document.write("<h3>Please enter your password.</h3>");
-}
-// Check if the entered password matches the correct password
-else if (enteredPassword === correctPassword) {
-document.write("<h3>Correct! The password you entered matches the original password.</h3>");
-}
-// If the entered password is incorrect
-else {
-document.write("<h3>Incorrect password.</h3>");
-}
-//   task 6
-// var greeting;
-      // var hour = 13;
-      // if (hour < 18) {
-      // greeting = "Good day";
-      // else
-      // greeting = "Good evening";
-      // }
-
-      var greeting;
-      var hour = 13;
-      if (hour < 18) {
-      greeting = "Good day";
-      } else {
-      greeting = "Good evening";
-      }
-      
-// task 7
-// Prompt the user to enter the time in 24-hour clock format
-var time = prompt("Enter the time in 24-hour clock format (e.g., 1900 for 7pm):");
-
-// Extract the hour from the time
-var hour = parseInt(time.substring(0, 2));
-
-// Determine the appropriate case based on the hour
-if (hour >= 0 && hour < 12) {
-document.write("<h3> Good morning!</h3>");
-} else if (hour >= 12 && hour < 18) {
-document.write("<h3> Good afternoon!</h3>");
-} else if (hour >= 18 && hour < 24) {
-document.write("<h3> Good evening!</h3>");
+// task2
+var gender = prompt("Enter your gender:");
+if (gender.toLowerCase() === "male") {
+  document.write("<h2>Good Morning Sir.</h2>");
+} else if (gender.toLowerCase() === "female") {
+  document.write("<h2>Good Morning Maam.</h2>");
 } else {
-document.write("<h3> Invalid time entered.</h3>");
+  document.write("<h2>Good Morning!</h2>");
 }
+// task3
+var signalColor = prompt("Enter the color of the traffic signal:");
+signalColor = signalColor.toLowerCase();
+if (signalColor === "red") {
+  document.write("<h3>Must Stop</h3>");
+} else if (signalColor === "yellow") {
+  document.write("<h3>Ready to move</h3>");
+} else if (signalColor === "green") {
+  document.write("<h3>Move now</h3>");
+} else {
+  document.write("<h3>Invalid color</h3>");
+}
+// task4
+var remainingFuel = +prompt(
+  "Enter the remaining fuel in your car (in liters):"
+);
+if (remainingFuel < 0.25) {
+  document.write("<h2>Please refill the fuel in your car.</h2>");
+} else {
+  document.write("<h3>Fuel level is sufficient. Have a safe journey!</h3>");
+}
+// task5a
+var a = 4;
+if (++a === 5) {
+  alert("given condition for variable a is true");
+}
+// task5b
+var b = 82;
+if (b++ === 83) {
+  alert("given condition for variable b is true");
+}
+// task5c
+var c = 12;
+if (c++ === 13) {
+  alert("condition 1 is true");
+}
+if (c === 13) {
+  alert("condition 2 is true");
+}
+if (++c < 14) {
+  alert("condition 3 is true");
+}
+if (c === 14) {
+  alert("condition 4 is true");
+}
+// task5d
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost) {
+  alert("The cost equals");
+}
+// task5e
+if (true) {
+  alert("True");
+}
+if (false) {
+  alert("False");
+}
+// task5f
+if ("car" < "cat") {
+  alert("car is smaller than cat");
+}
+// task6
+var subject1Marks = parseFloat(prompt("Enter marks obtained in subject 1:"));
+var subject2Marks = parseFloat(prompt("Enter marks obtained in subject 2:"));
+var subject3Marks = parseFloat(prompt("Enter marks obtained in subject 3:"));
+var totalMarks = parseFloat(prompt("Enter total marks:"));
+var totalObtainedMarks = subject1Marks + subject2Marks + subject3Marks;
+var percentage = (totalObtainedMarks / totalMarks) * 100;
+var grade;
+if (percentage >= 80) {
+  grade = "A+";
+} else if (percentage >= 70) {
+  grade = "A";
+} else if (percentage >= 60) {
+  grade = "B";
+} else if (percentage >= 50) {
+  grade = "C";
+} else if (percentage >= 40) {
+  grade = "D";
+} else {
+  grade = "Fail";
+}
+document.write("<h3>Percentage: " + percentage.toFixed(2) + "%</h3>");
+document.write("<h3>Grade: " + grade + "</h3>");
+// task7
+var secretNumber = Math.floor(Math.random() * 10) + 1;
+var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+if (userGuess === secretNumber) {
+  document.write("<h3>Bingo! Correct answer.</h3>");
+} else if (userGuess === secretNumber + 1) {
+  document.write("<h3>Close enough to the correct answer.</h3>");
+} else {
+  document.write(
+    "<h3>Sorry, incorrect guess. The secret number was " +
+      secretNumber +
+      ".</h3>"
+  );
+}
+// task8
+var number = parseInt(prompt("Enter a number:"));
+if (number % 3 === 0) {
+  document.write("<h3>The number " + number + " is divisible by 3.</h3>");
+} else {
+  document.write("<h3>The number " + number + " is not divisible by 3.</h3>");
+}
+//  task9
+var number = +prompt("Enter a number:");
+if (number % 2 === 0) {
+  document.write("<h3>The number " + number + " is even.</h3>");
+} else {
+  document.write("<h3>The number " + number + " is odd.</h3>");
+}
+// task10
+var temperature = +prompt("Enter the temperature in degrees Celsius:");
+if (temperature > 40) {
+  document.write("<h3> It is too hot outside.</h3>");
+} else if (temperature > 30) {
+  document.write("<h3> The weather today is normal.</h3>");
+} else if (temperature > 20) {
+  document.write("<h3> Today's weather is cool.</h3>");
+} else if (temperature > 10) {
+  document.write("<h3> OMG! Today's weather is so cool.</h3>");
+} else {
+  document.write("<h3> It is extremely cold outside.</h3>");
+}
+// task 11
+ // Prompt the user to enter the first number
+ var firstNumber = parseFloat(prompt("Enter the first number:"));
+
+ // Prompt the user to enter the second number
+ var secondNumber = parseFloat(prompt("Enter the second number:"));
+
+ // Prompt the user to enter the operation
+ var operation = prompt("Enter the operation (+, -, *, /, %):");
+
+ // Variable to store the calculated result
+ var result;
+
+ // Check the operation and perform the corresponding calculation
+ if (operation === "+") {
+ result = firstNumber + secondNumber;
+ } else if (operation === "-") {
+ result = firstNumber - secondNumber;
+ } else if (operation === "*") {
+ result = firstNumber * secondNumber;
+ } else if (operation === "/") {
+ result = firstNumber / secondNumber;
+ } else if (operation === "%") {
+ result = firstNumber % secondNumber;
+ } else {
+ document.write("<h3> Invalid operation.</h3>");
+ // Exit the program if the operation is invalid
+ throw new Error("Invalid operation.");
+ }
+
+ // Display the calculated result to the user
+ document.write("<h3> The calculated result is: " + result + "</h3>");
