@@ -1,10 +1,13 @@
 // task1
-alert("Hello there! Welcome to our website.");
+var age = 28;
+alert("I am " + age + "years old");
 // task2
-alert("JavaScript Alert\nError! Please enter a valid password.");
+alert("you have visited thiss website 14 times");
 // task3
-alert("Welcome to JS Land \n Happy Coding!");
-// task4
-alert("JavaScript Alert \n Welcome to JS Land..");
-alert("JavaScript Alert \n Happy Coding!");
-alert("Prevent this page from creating additional dialogs.");
+var birthyear = 1992;
+document.write(" My birth year is " + birthyear);
+//   task4
+var VisitorName = "maryam";
+var ProductTitle = "maryam Clothing store";
+var Quantity = "5 T-shirt's ";
+document.write(VisitorName + " ordered " + Quantity + " on " + ProductTitle);
