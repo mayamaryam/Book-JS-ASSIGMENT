@@ -1,112 +1,242 @@
 // task 1
-var num = [[],[],[]]
+function main() {
 
+    var firstName = prompt("Enter your first name:");
+  
+    var lastName = prompt("Enter your last name:");
+  
+    var fullName = firstName + " " + lastName;
+  
+    console.log("Hello, " + fullName + "! Welcome.");
+  }
+ 
+  main();
+//   task 2
 
+function main() {
+   
+    var favoritePhoneModel = prompt("Enter your favorite mobile phone model:");
+  
+    var inputLength = favoritePhoneModel.length;
+  
+    document.write("Length of your input: " + inputLength);
+  }
+  
+  main();
+//   task 3
 
+function main() {
+    var word = "Pakistani";
+    var targetLetter = "n";
+  
+    var index = word.indexOf(targetLetter);
+  
+    document.write("Index of letter '" + targetLetter + "' in the word '" + word + "': " + index);
+  }
+  
+  main();
+//   task 4
+function main() {
+    var word = "Hello World";
+    var targetLetter = "l";
+  
+    var lastIndex = word.lastIndexOf(targetLetter);
+  
+    document.write("Last index of letter '" + targetLetter + "' in the word '" + word + "': " + lastIndex);
+  }
+  
+  main();
+//   task 5
 
-// task 2
-num[0] = [0,1,2,3]
-num[1] = [1,0,1,2]
-num[2] = [2,1,0,1]
-document.write(num[0]+"<br/>"+num[1]+"<br/>"+num[2]+"<br/>")
+function main() {
+    var word = "Pakistani";
+    var index = 3;  
+    var character = word.charat(index);
+    document.write("Character at index " + index + " in the word '" + word + "': " + character);
+  }
+  
+  main();
+  
+//   task 6
 
+function main() {
+    var word = "Hyderabad";
+    var substringToReplace = "Hyder";
+    var replacement = "Islam";
+  
+    var newWord = word.replace(substringToReplace, replacement);
+  
+    document.write("Original word: " + word + "<br>");
+    document.write("Modified word: " + newWord);
+  }
+  main();
+//   task 7
 
-// task 3
-for (var i = 1; i <= 10; i++){
-    document.write(i+"<br/>")
-}
-// task 4
-var table = +prompt("Enter a number  to show its multiplication table");
-var length = +prompt("Enter Multiplication table" );
-document.write("Multiplication Table of " +table+"<br/> length"+length+ "<br/>")
-for(var i = 1; i <= length; i++){
-    document.write(table+" x "+i+" = "+table*i+"<br/>")
-}
+function main() {
+    var message = "Ali and Sami are best friends. They play cricket and football together.";
+  
+    var modifiedMessage = message.replace(/and/g, "&");
+  
+    document.write("Original message: " + message + "<br>");
+    document.write("Modified message: " + modifiedMessage);
+  }
+  
+  main();
+//   task 8
 
-// task 5
-var fruits = ["apple", "banana", "mango", "orange", "strawberry"]
-var arr = fruits.length
-for(var i = 0; i <arr; i++){
-    document.write("Element at index "+i+" is "+fruits[i]+"<br/>")
-}
+function main() {
+    var str = "472";
+  
+    var num = Number(str);
+  
+    document.write("String value: " + str + "<br>");
+    document.write("String type: " + typeof str + "<br>");
+    document.write("Number value: " + num + "<br>");
+    document.write("Number type: " + typeof num);
+  }
+  main();
+  
+//   task 9
 
-// task 6
-var num = [];
-var odd = [];
-var even = [];
-var series = [];
+function main() {
+ 
+    var userInput = prompt("Enter your input:");
+  
+    var capitalizedInput = userInput.toUpperCase();
+  
+    console.log("Input: " + userInput);
+    console.log("Capitalized input: " + capitalizedInput);
+  }
+  
+  main();
+//   task 10
 
-for(var i = 0; i <=15; i++){
-    num[i] = i+1;
-}
-document.write("counting :"+num+"<br/>")
-document.write(" Reverse counting :"+num.reverse()+"<br/>")
-
-for(var a = 1; a <= 20; a++){
-    if(a % 2 !==0){
-        even[a] = a;
+function main() {
+   
+    var userInput = prompt("Enter your input:");
+  
+    var titleCaseInput = totitleCase(userInput);
+  
+    console.log("Input: " + userInput);
+    console.log("Title case input: " + titleCaseInput);
+  }
+  
+  function toTitleCase(str) {
+    
+    var words = str.toLowerCase().split(" ");
+  
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
     }
-}
-document.write("Even :"+even+"<br/>")
-for(var b = 1; b <= 20; b++){
-    if(b % 2 === 0){
-        odd[b] = b;
+  
+    var titleCaseStr = words.join(" ");
+  
+    return titleCaseStr;
+  }
+  
+  main();
+  
+// task 11
+
+function main() {
+   
+    var username = prompt("Enter your username:");
+  
+    var hasSpecialSymbols = checkSpecialSymbols(username);
+  
+    while (hasSpecialSymbols) {
+      username = prompt("Please enter a valid username without special symbols ([@ . , !]):");
+      hasSpecialSymbols = checkSpecialSymbols(username);
     }
-}
-document.write("Odd :"+odd+"<br/>")
-for(var d = 1; d <= 20; d++){
-    if(d % 2 === 0){
-        series[d] = d+"k";
+  
+    console.log("Username: " + username);
+  }
+  
+  function checkSpecialSymbols(str) {
+    var specialSymbols = ['@', '.', ',', '!'];
+  
+    for (var i = 0; i < specialSymbols.length; i++) {
+      if (str.indexOf(specialSymbols[i]) !== -1) {
+        return true;
+      }
     }
-}
-document.write("Series :"+series+"<br/>")
+  
+    return false;
+  }
+  
+  main();
+  
+//   task 12
 
-
-
-
-// task 7
-
-var a = ["cake","apple pie","cookie","chips","patties"]
-var user = prompt("Welcome to ABC Bkery what do you want to order sir/ma'am")
-var b = a.indexOf(user)
-if(b<0){
-    alert("we are sorry"+user+"is not available in our bakery")
-}
-else{
-    alert(user+"is available at index "+b+" in our bakery") 
-}
-
-
-
-// task 8
-
-var arr = [24,53,78,91,12];
-var max = Math.max.apply(Math,arr)
-var min = Math.min.apply(Math,arr)
-console.log(max , min)
-document.write(
-    "Array items: "+arr+
-    "<br/> The largest number is " +max+
-    "<br/> The samllest number is " +min
-)
-
-
-// task 9
-
-var arr = [24,53,78,91,12];
-var max = Math.max.apply(Math,arr)
-var min = Math.min.apply(Math,arr)
-console.log(max , min)
-document.write(
-    "Array items: "+arr+
-    "<br/> The largest number is " +max+
-    "<br/> The samllest number is " +min+"<br/>"
-)
-
-// task 10
-
-for(var i = 1; i<=100; i++){
-    if(i%5 === 0){
-        document.write(i+" ,")
+function main() {
+   
+    var password = prompt("Enter your password:");
+  
+    var isValid = checkPasswordRequirements(password);
+  
+    while (!isValid) {
+      password = prompt("Please enter a valid password:\n- It should contain alphabets and numbers\n- It should not start with a number\n- It must be at least 6 characters long");
+      isValid = checkPasswordRequirements(password);
     }
-}
+   
+    console.log("Password: " + password);
+  }
+  
+  function checkPasswordRequirements(password) {
+   
+    var containsAlphabets = /[a-zA-Z]/.test(password);
+    var containsNumbers = /[0-9]/.test(password);
+  
+    var startsWithLetter = isNaN(parseInt(password[0]));
+  
+    var isLongEnough = password.length >= 6;
+  
+    return containsAlphabets && containsNumbers && startsWithLetter && isLongEnough;
+  }
+  
+  main();
+//   task 13
+
+function main() {
+    var university = "University of Karachi";
+  
+    var universityArray = university.split(" ");
+  
+    document.write("Original string: " + university + "<br>");
+    document.write("Array elements: " + universityArray.join(", "));
+  }
+  
+  main();
+//   task 14
+
+function main() {
+   
+    var userInput = prompt("Enter your input:");
+  
+    var lastCharacter = userInput[userInput.length - 1];
+  
+    console.log("Last character: " + lastCharacter);
+  }
+  
+  main();
+//   task 15
+
+function main() {
+    var sentence = "The quick brown fox jumps over the lazy dog";
+    var wordToCount = "the";
+  
+    var lowercaseSentence = sentence.toLowerCase();
+    var lowercaseWord = wordToCount.toLowerCase();
+  
+    var words = lowercaseSentence.split(" ");
+  
+    var count = 0;
+  
+    for (var i = 0; i < words.length; i++) {
+      if (words[i] === lowercaseWord) {
+        count++;
+      }
+    }
+  
+    console.log("Number of occurrences of '" + wordToCount + "': " + count);
+  }
