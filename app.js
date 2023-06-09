@@ -1,242 +1,124 @@
 // task 1
-function main() {
 
-    var firstName = prompt("Enter your first name:");
+function main() {
   
-    var lastName = prompt("Enter your last name:");
+    var userInput = parseInt(prompt("Enter a positive integer:"));
   
-    var fullName = firstName + " " + lastName;
+    if (Number.isInteger(userInput) && userInput > 0) {
+      
+      var roundedValue = Math.round(userInput);
   
-    console.log("Hello, " + fullName + "! Welcome.");
+      var floorValue = Math.floor(userInput);
+  
+      var ceilValue = Math.ceil(userInput);
+  
+      document.write("Number: " + userInput + "<br>");
+      document.write("Rounded Value: " + roundedValue + "<br>");
+      document.write("Floor Value: " + floorValue + "<br>");
+      document.write("Ceil Value: " + ceilValue + "<br>");
+    } else {
+      
+      document.write("Invalid input. Please enter a positive integer.");
+    }
   }
- 
   main();
 //   task 2
 
 function main() {
-   
-    var favoritePhoneModel = prompt("Enter your favorite mobile phone model:");
+    
+    var userInput = parseFloat(prompt("Enter a negative floating-point number:"));
   
-    var inputLength = favoritePhoneModel.length;
+    if (Number.isFinite(userInput) && userInput < 0) {
+     
+      var roundedValue = Math.round(userInput);
   
-    document.write("Length of your input: " + inputLength);
+      var floorValue = Math.floor(userInput);
+  
+      var ceilValue = Math.ceil(userInput);
+  
+      document.write("Number: " + userInput + "<br>");
+      document.write("Rounded Value: " + roundedValue + "<br>");
+      document.write("Floor Value: " + floorValue + "<br>");
+      document.write("Ceil Value: " + ceilValue + "<br>");
+    } else {
+     
+      document.write("Invalid input. Please enter a negative floating-point number.");
+    }
   }
   
   main();
 //   task 3
 
 function main() {
-    var word = "Pakistani";
-    var targetLetter = "n";
+   
+    var userInput = parseFloat(prompt("Enter a number:"));
   
-    var index = word.indexOf(targetLetter);
+    var absoluteValue = Math.abs(userInput);
   
-    document.write("Index of letter '" + targetLetter + "' in the word '" + word + "': " + index);
+    document.write("Absolute value of " + userInput + " is " + absoluteValue);
   }
   
   main();
 //   task 4
+
 function main() {
-    var word = "Hello World";
-    var targetLetter = "l";
+   
+    var diceValue = Math.floor(Math.random() * 6) + 1;
   
-    var lastIndex = word.lastIndexOf(targetLetter);
-  
-    document.write("Last index of letter '" + targetLetter + "' in the word '" + word + "': " + lastIndex);
+    document.write("Dice value: " + diceValue);
   }
   
   main();
 //   task 5
 
 function main() {
-    var word = "Pakistani";
-    var index = 3;  
-    var character = word.charat(index);
-    document.write("Character at index " + index + " in the word '" + word + "': " + character);
+    
+    var coinValue = Math.random() < 0.5 ? "Heads" : "Tails";
+  
+    document.write("Coin value: " + coinValue);
   }
   
   main();
-  
 //   task 6
 
 function main() {
-    var word = "Hyderabad";
-    var substringToReplace = "Hyder";
-    var replacement = "Islam";
+   
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
   
-    var newWord = word.replace(substringToReplace, replacement);
-  
-    document.write("Original word: " + word + "<br>");
-    document.write("Modified word: " + newWord);
+    document.write("Random number: " + randomNumber);
   }
+  
   main();
 //   task 7
 
 function main() {
-    var message = "Ali and Sami are best friends. They play cricket and football together.";
+
+    var userInput = prompt("Enter your weight:");
   
-    var modifiedMessage = message.replace(/and/g, "&");
+    var weight = parseFloat(userInput);
   
-    document.write("Original message: " + message + "<br>");
-    document.write("Modified message: " + modifiedMessage);
+    if (Number.isNaN(weight)) {
+      document.write("Invalid input. Please enter a valid weight.");
+    } else {
+     
+      document.write("Weight: " + weight + " kgs");
+    }
   }
   
   main();
 //   task 8
 
 function main() {
-    var str = "472";
-  
-    var num = Number(str);
-  
-    document.write("String value: " + str + "<br>");
-    document.write("String type: " + typeof str + "<br>");
-    document.write("Number value: " + num + "<br>");
-    document.write("Number type: " + typeof num);
-  }
-  main();
-  
-//   task 9
-
-function main() {
- 
-    var userInput = prompt("Enter your input:");
-  
-    var capitalizedInput = userInput.toUpperCase();
-  
-    console.log("Input: " + userInput);
-    console.log("Capitalized input: " + capitalizedInput);
-  }
-  
-  main();
-//   task 10
-
-function main() {
-   
-    var userInput = prompt("Enter your input:");
-  
-    var titleCaseInput = totitleCase(userInput);
-  
-    console.log("Input: " + userInput);
-    console.log("Title case input: " + titleCaseInput);
-  }
-  
-  function toTitleCase(str) {
     
-    var words = str.toLowerCase().split(" ");
+    var secretNumber = Math.floor(Math.random() * 10) + 1;
   
-    for (var i = 0; i < words.length; i++) {
-      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
-    }
+    var userInput = parseInt(prompt("Guess the secret number (between 1 and 10):"));
   
-    var titleCaseStr = words.join(" ");
-  
-    return titleCaseStr;
-  }
-  
-  main();
-  
-// task 11
-
-function main() {
+    if (userInput === secretNumber) {
    
-    var username = prompt("Enter your username:");
-  
-    var hasSpecialSymbols = checkSpecialSymbols(username);
-  
-    while (hasSpecialSymbols) {
-      username = prompt("Please enter a valid username without special symbols ([@ . , !]):");
-      hasSpecialSymbols = checkSpecialSymbols(username);
+      document.write("Congratulations! You guessed the secret number.");
+    } else {
+     
+      document.write("Sorry, that was incorrect. The secret number was " + secretNumber + ".");
     }
-  
-    console.log("Username: " + username);
-  }
-  
-  function checkSpecialSymbols(str) {
-    var specialSymbols = ['@', '.', ',', '!'];
-  
-    for (var i = 0; i < specialSymbols.length; i++) {
-      if (str.indexOf(specialSymbols[i]) !== -1) {
-        return true;
-      }
-    }
-  
-    return false;
-  }
-  
-  main();
-  
-//   task 12
-
-function main() {
-   
-    var password = prompt("Enter your password:");
-  
-    var isValid = checkPasswordRequirements(password);
-  
-    while (!isValid) {
-      password = prompt("Please enter a valid password:\n- It should contain alphabets and numbers\n- It should not start with a number\n- It must be at least 6 characters long");
-      isValid = checkPasswordRequirements(password);
-    }
-   
-    console.log("Password: " + password);
-  }
-  
-  function checkPasswordRequirements(password) {
-   
-    var containsAlphabets = /[a-zA-Z]/.test(password);
-    var containsNumbers = /[0-9]/.test(password);
-  
-    var startsWithLetter = isNaN(parseInt(password[0]));
-  
-    var isLongEnough = password.length >= 6;
-  
-    return containsAlphabets && containsNumbers && startsWithLetter && isLongEnough;
-  }
-  
-  main();
-//   task 13
-
-function main() {
-    var university = "University of Karachi";
-  
-    var universityArray = university.split(" ");
-  
-    document.write("Original string: " + university + "<br>");
-    document.write("Array elements: " + universityArray.join(", "));
-  }
-  
-  main();
-//   task 14
-
-function main() {
-   
-    var userInput = prompt("Enter your input:");
-  
-    var lastCharacter = userInput[userInput.length - 1];
-  
-    console.log("Last character: " + lastCharacter);
-  }
-  
-  main();
-//   task 15
-
-function main() {
-    var sentence = "The quick brown fox jumps over the lazy dog";
-    var wordToCount = "the";
-  
-    var lowercaseSentence = sentence.toLowerCase();
-    var lowercaseWord = wordToCount.toLowerCase();
-  
-    var words = lowercaseSentence.split(" ");
-  
-    var count = 0;
-  
-    for (var i = 0; i < words.length; i++) {
-      if (words[i] === lowercaseWord) {
-        count++;
-      }
-    }
-  
-    console.log("Number of occurrences of '" + wordToCount + "': " + count);
   }
